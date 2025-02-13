@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+/* semib69051@perceint.com */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1f;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    background-color: #1a1a1f;
+}
+
+.left-panel {
+    flex: 0 0 58%;
+    margin: 10px;
+    
+}
+
+.right-panel {
+    flex: 0 0 42%;
+    margin: 10px
+}
+
+#transcript-input {
+    width: 98%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+#live-recording {
+    /* border: 3px solid #FFFFFF; */
+    border: 3px solid #13ef93;
+    background-color: #04452a;
+    /* background-color: #003e79; */
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 2px 292px;
+    margin-bottom: 5px;
+    cursor:pointer;
+}
+
+#processing {
+    /* border: 3px solid #003e79; */
+    /* background-color: #13ef93;
+    border: 3px solid #04452a; */
+    border: 3px solid #13ef93;
+    background-color: #04452a;
+    /* background-color: #003e79; */
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 2px 275px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+#processing:hover {
+    background-color: #13ef93; 
+    /* background-color: #012c55; */
+    color: white;
+}
+
+/* buttons guide; https://www.w3schools.com/css/css3_buttons.asp */
+
+.buttons button {
+    margin-right: 5px;
+    margin-top: 2px;
+    padding: 10px 83.5px; /* height width */
+    border-radius: 10px;
+    border: 3px solid #13ef93;
+    background-color: #04452a;
+    /* background-color: #444444; */
+    color:#FFFFFF;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    
+}
+
+.buttons button:hover {
+    background-color: #13ef93; 
+    color: white;
+}
+
+.playing button {
+    background-color: #1a1a1f;
+    color:#FFFFFF;
+    /* background-color: #6b6b6b; */
+    padding: 1px 69px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 2px solid #13ef93;
+    cursor:pointer;
+}
+
+.playing button:hover {
+    background-color: #13ef93;
+    color: white;
+}
+
+.audios button {
+    background-color: #04452a;
+    color:#FFFFFF;
+    /* background-color: #6b6b6b; */
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 2px solid #13ef93;
+    cursor:pointer;
+}
+
+
+.audios button:hover {
+    background-color: #13ef93;
+    color: white;
+}
+
+.right-panel h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#transcribing-gui {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #13ef93;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 901;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

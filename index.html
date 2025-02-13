@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Speech Recognition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <h1>CLEANSPEAK</h1>
+            <p>Choose your input type: live recording or pre-recorded audio file, then click transcribe for the transcript, analysis, and feedback.</p>
+            <p style="margin-bottom: 5px;">—————————————————————————————————————————</p>
+
+            <button id="live-recording">Live [00:00]</button>
+            
+            <center>
+                <p style="margin-bottom: 1px; margin-top: 1px;">or</p>
+            </center>
+
+            <input type="file" id="audio-file" accept="audio/*" style="margin-bottom: 1px; display: none;">
+            <div class="audios" style="display: flex; gap: 10px; margin-bottom: 1px;">
+                <button id="upload-button" accesskey="c"><u>C</u>hoose Audio File</button>
+                <!-- <button id="current-file;" style="text-align: left;">File Selected: None</button> -->
+                <button id="current-file" style="text-align: left; padding-left: 10px;">File Selected: None</button>
+            </div>
+
+
+            <p style="margin-bottom: 1px; margin-top: 1px;">—————————————————————————————————————————</p>
+
+            <div class="playing" style="display: flex; gap: 10px; margin-top: 1px;">
+                <button id="play-audio" accesskey="p"><u>P</u>lay Audio</button>
+                <button id="pause-audio">Pause <u>[Space]</u></button>
+                <button id="stop-audio" accesskey="s"><u>S</u>top Audio</button>
+            </div>
+
+
+            <p style="margin-bottom: 1px; margin-top: 1px;">—————————————————————————————————————————</p>
+            <button id="processing">Transcribe <u>[Enter]</u></button>
+            <textarea id="transcript-input" placeholder="Transcript goes here"></textarea>      
+            
+            <div class="buttons">
+                <button id="copy-btn" accesskey="y">Cop<u>y</u></button>
+                <button id="download-btn" accesskey="d">Downloa<u>d</u></button>
+                <button id="clear-btn" accesskey="r">Clea<u>r</u></button>
+            </div>
+        </div>  
+        
+
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+
+            <h2 style="margin-bottom: 1px;">Statistics</h2>
+
+            <p style="margin-bottom: 5px; margin-top: 1px;">——————————————————————————————————</p>
+
+            <p style="margin-top: 5px;">Word Count: <b>[<span id="word-count">0]</b></span></p>
+            
+            <p>Confidence: <b>[<span id="confidence">0]</span></b></p>
+
+            <p>Speakers: <b>[<span id="speakers">No one]</span></b></p>
+
+            <p style = "margin-bottom: 5px;">Duration: <b>[<span id="duration">]</span></b></p>
+
+            <p style ="margin-bottom: 5px;">Words per Minute: <b>[<span id="wpm">0]</span></b></p>
+
+            <p style="margin-bottom: 5px;">Filler Word Density: <b>[<span id="density">0%]</span></b></p>
+
+            <p style="margin-bottom: 5px;">Filler Word Count: <b>[<span id="filler-words">0]</span></b></p>
+
+            <p style="margin-bottom: 5px;">Filler Words: <b><span id="fillerdict">{ }</span></b></p>
+
+            <p style="margin-bottom: 1px; margin-top: 5px;">——————————————————————————————————</p>
+
+            <h3 style="margin-top: 1px;">Feedback:<span id="other-info"></span></h3>
+            
+            <p><span id ="feedback-info">...</span></p>
+
+            <p>Reminder: add speaker/whos speaking to transcript, detect filler words algorithm? Add accesskeys (HTML) (done) GUI with stopwatch upon clicking transcribe, adjust \nSpeaker also consider adding: filler word density (filler word count / total words) * 100 (ex: 200/1000 words = 20% density), also add speech rate (word count / duration in seconds) to see words per minute Also: say on jurnal report that you thought about adding the average amount of words between each filler word appearance example on average every 12 words you say a filler word but then you contemplated the usefulness and accuracy especially if there are low filler words </p>
+
+        </div>
+    </div>
+    <div id="transcribing-gui" style="display: none;">Transcribing... <span id="transcribing-timer">0</span></div>
+
+
+    <script src="script.js"></script>
+</body>
+<!-- semib69051@perceint.com -->
+</html>
