@@ -296,7 +296,7 @@ document.getElementById('transcript-input').addEventListener('input', () => {
     formData.append('audio', audioFile);
   
     try {
-        const response = await fetch('http://fillerwords.pythonanywhere.com', { //127.0.0.1:5000/process-audio
+        const response = await fetch('https://fillerwords.pythonanywhere.com', { //127.0.0.1:5000/process-audio
             method: 'POST',
             body: formData
         });
